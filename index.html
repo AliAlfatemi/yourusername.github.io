@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali Alfatemi | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Custom scrollbar for a sleeker look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569;
+        }
+        
+        /* Utility for hiding scrollbar but keeping functionality if needed */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-200 font-sans selection:bg-blue-500/30 selection:text-blue-200">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <a href="#hero" class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text cursor-pointer">
+                        Ali<span class="text-white">.dev</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#hero" class="nav-link text-sm font-medium transition-colors duration-300 text-blue-400 hover:text-blue-400" data-section="hero">Home</a>
+                    <a href="#about" class="nav-link text-sm font-medium transition-colors duration-300 text-slate-300 hover:text-blue-400" data-section="about">About</a>
+                    <a href="#skills" class="nav-link text-sm font-medium transition-colors duration-300 text-slate-300 hover:text-blue-400" data-section="skills">Skills</a>
+                    <a href="#projects" class="nav-link text-sm font-medium transition-colors duration-300 text-slate-300 hover:text-blue-400" data-section="projects">Projects</a>
+                    <a href="#contact" class="nav-link text-sm font-medium transition-colors duration-300 text-slate-300 hover:text-blue-400" data-section="contact">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-slate-300 hover:text-white focus:outline-none">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-slate-800 shadow-xl border-t border-slate-700">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#hero" class="mobile-link block w-full text-left px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-700 transition-colors">Home</a>
+                <a href="#about" class="mobile-link block w-full text-left px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-700 transition-colors">About</a>
+                <a href="#skills" class="mobile-link block w-full text-left px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-700 transition-colors">Skills</a>
+                <a href="#projects" class="mobile-link block w-full text-left px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-700 transition-colors">Projects</a>
+                <a href="#contact" class="mobile-link block w-full text-left px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-700 transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+            <!-- Background Gradient Blobs -->
+            <div class="absolute top-20 left-10 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center">
+                    <div class="inline-block mb-4 px-4 py-1.5 rounded-full bg-slate-800 border border-slate-700 text-blue-400 font-medium text-sm">
+                        Available for work
+                    </div>
+                    <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
+                        Building Digital <br />
+                        <span class="bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
+                            Experiences
+                        </span>
+                    </h1>
+                    <p class="text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+                        I'm a Full Stack Developer passionate about building accessible, pixel-perfect user interfaces that blend design and technology.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <a href="#projects" class="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-semibold transition-all duration-300 transform hover:scale-105 flex items-center gap-2 shadow-lg shadow-blue-500/25">
+                            View Work <i data-lucide="briefcase" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#contact" class="px-8 py-4 bg-slate-800 hover:bg-slate-700 text-white rounded-full font-semibold transition-all duration-300 border border-slate-700 flex items-center gap-2">
+                            Contact Me <i data-lucide="mail" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+
+                    <div class="mt-20 flex justify-center animate-bounce">
+                        <a href="#about" class="text-slate-500 hover:text-white transition-colors">
+                            <i data-lucide="chevron-down" class="w-8 h-8"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-24 bg-slate-900 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                    <div class="relative group">
+                        <div class="absolute -inset-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl blur-lg opacity-30 group-hover:opacity-50 transition duration-500"></div>
+                        <div class="relative bg-slate-800 rounded-2xl p-2 aspect-square rotate-3 group-hover:rotate-0 transition duration-500">
+                           <div class="w-full h-full bg-slate-700 rounded-xl overflow-hidden flex items-center justify-center">
+                              <i data-lucide="user" class="w-32 h-32 text-slate-500"></i>
+                           </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">About Me</h2>
+                        <div class="space-y-4 text-slate-400 text-lg leading-relaxed">
+                            <p>
+                                Hello! I'm Ali Alfatemi, a software engineer based in New York. I enjoy creating things that live on the internet. My interest in web development started back in 2018 when I decided to try editing custom Tumblr themes — turns out hacking together HTML & CSS is pretty fun!
+                            </p>
+                            <p>
+                                Fast-forward to today, and I've had the privilege of working at an advertising agency, a start-up, and a huge corporation. My main focus these days is building accessible, inclusive products and digital experiences for a variety of clients.
+                            </p>
+                            <p>
+                                When I'm not at the computer, I'm usually hanging out with my cat, reading, or running around the city.
+                            </p>
+                        </div>
+                        
+                        <div class="mt-8 grid grid-cols-2 gap-4">
+                            <div class="flex items-center gap-3 text-slate-300">
+                                <span class="w-2 h-2 bg-blue-400 rounded-full"></span>
+                                <span>Problem Solver</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-slate-300">
+                                <span class="w-2 h-2 bg-purple-400 rounded-full"></span>
+                                <span>Fast Learner</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-slate-300">
+                                <span class="w-2 h-2 bg-green-400 rounded-full"></span>
+                                <span>Team Player</span>
+                            </div>
+                            <div class="flex items-center gap-3 text-slate-300">
+                                <span class="w-2 h-2 bg-pink-400 rounded-full"></span>
+                                <span>Creative</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-24 bg-slate-950">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Technical Skills</h2>
+                    <p class="text-slate-400 max-w-2xl mx-auto">
+                        Here are the technologies and tools I use to build digital products.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Frontend -->
+                    <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800 hover:border-slate-700 transition-all duration-300 hover:-translate-y-1">
+                        <div class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center mb-6">
+                            <i data-lucide="globe" class="text-blue-400 w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Frontend</h3>
+                        <ul class="space-y-2">
+                            <li class="text-slate-400 flex items-center gap-2"><span class="w-1.5 h-1.5 bg-slate-600 rounded-full"></span>React</li>
+                            <li class="text-slate-400 flex items-center gap-2"><span class="w-1.5 h-1.5 bg-slate-600 rounded-full"></span>TypeScript</li>
+                            <li class="text-slate-400 flex items-center gap-2"><span class="w-1.5 h-1.5 bg-slate-600 rounded-full"></span>Next.js</li>
+                            <li class="text-slate-400 flex items-center gap-2"><span class="w-1.5 h-1.5 bg-slate-600 rounded-full"></span>Tailwind CSS</li>
+                            <li class="text-slate-400 flex items-center gap-2"><span class="w-1.5 h-1.5 bg-slate-600 rounded-full"></span>Redux</li>
+                            <li class="text-slate-400 flex items-center gap-2"><span class="w-1.5 h-1.5 bg-slate-600 rounded-full"></span>HTML5/CSS3</li>
+                        </ul>
+                    </div>
+
+                    <!-- Backend -->
+                    <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800 hover:border-slate-700 transition-all duration-300 hover:-translate-y-1">
+                        <div class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center mb-6">
+                            <i data-lucide="terminal" class="text-purple-400 w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Backend</h3>
+                        <ul class="space-y-2">
+                            <li class="text-slate-400 flex items-center gap-2"><span class="w-1.5 h-1.5 bg-slate-600 rounded-full"></span>Node.js</li>
+                            <li class="text-slate-400 flex items-center gap-2"><span class="w-1.5 h-1.5 bg-slate-600 rounded-full"></span>Express</li>
+                            <li class="text-slate-400 flex items-center gap-2"><span class="w-1.5 h-1.5 bg-slate-600 rounded-full"></span>Python</li>
+                            <li class="text-slate-400 flex items-center gap-2"><span class="w-1.5 h-1.5 bg-slate-600 rounded-full"></span>PostgreSQL</li>
+                            <li class="text-slate-400 flex items-center gap-2"><span class="w-1.5 h-1.5 bg-slate-600 rounded-full"></span>MongoDB</li>
+                            <li class="text-slate-400 flex items-center gap-2"><span class="w-1.5 h-1.5 bg-slate-600 rounded-full"></span>GraphQL</li>
+                        </ul>
+                    </div>
+
+                    <!-- Tools -->
+                    <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800 hover:border-slate-700 transition-all duration-300 hover:-translate-y-1">
+                        <div class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center mb-6">
+                            <i data-lucide="cpu" class="text-green-400 w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Tools & DevOps</h3>
+                        <ul class="space-y-2">
+                            <li class="text-slate-400 flex items-center gap-2"><span class="w-1.5 h-1.5 bg-slate-600 rounded-full"></span>Git</li>
+                            <li class="text-slate-400 flex items-center gap-2"><span class="w-1.5 h-1.5 bg-slate-600 rounded-full"></span>Docker</li>
+                            <li class="text-slate-400 flex items-center gap-2"><span class="w-1.5 h-1.5 bg-slate-600 rounded-full"></span>AWS</li>
+                            <li class="text-slate-400 flex items-center gap-2"><span class="w-1.5 h-1.5 bg-slate-600 rounded-full"></span>CI/CD</li>
+                            <li class="text-slate-400 flex items-center gap-2"><span class="w-1.5 h-1.5 bg-slate-600 rounded-full"></span>Linux</li>
+                            <li class="text-slate-400 flex items-center gap-2"><span class="w-1.5 h-1.5 bg-slate-600 rounded-full"></span>Jest</li>
+                        </ul>
+                    </div>
+
+                    <!-- Design -->
+                    <div class="bg-slate-900 p-8 rounded-2xl border border-slate-800 hover:border-slate-700 transition-all duration-300 hover:-translate-y-1">
+                        <div class="w-12 h-12 bg-slate-800 rounded-lg flex items-center justify-center mb-6">
+                            <i data-lucide="palette" class="text-pink-400 w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Design</h3>
+                        <ul class="space-y-2">
+                            <li class="text-slate-400 flex items-center gap-2"><span class="w-1.5 h-1.5 bg-slate-600 rounded-full"></span>Figma</li>
+                            <li class="text-slate-400 flex items-center gap-2"><span class="w-1.5 h-1.5 bg-slate-600 rounded-full"></span>Adobe XD</li>
+                            <li class="text-slate-400 flex items-center gap-2"><span class="w-1.5 h-1.5 bg-slate-600 rounded-full"></span>UI/UX Principles</li>
+                            <li class="text-slate-400 flex items-center gap-2"><span class="w-1.5 h-1.5 bg-slate-600 rounded-full"></span>Responsive Design</li>
+                            <li class="text-slate-400 flex items-center gap-2"><span class="w-1.5 h-1.5 bg-slate-600 rounded-full"></span>Accessibility</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-24 bg-slate-900">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Featured Projects</h2>
+                    <p class="text-slate-400 max-w-2xl mx-auto">
+                        A selection of projects I've worked on recently.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <div class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 transition-all hover:shadow-2xl hover:shadow-blue-500/10">
+                        <div class="h-48 bg-gradient-to-br from-orange-500 to-red-500 opacity-80 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                           <i data-lucide="code" class="text-white/50 w-16 h-16 group-hover:scale-110 transition-transform duration-300"></i>
+                        </div>
+                        
+                        <div class="p-8">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
+                                    E-Commerce Dashboard
+                                </h3>
+                                <div class="flex gap-3">
+                                    <a href="#" class="text-slate-400 hover:text-white transition-colors">
+                                        <i data-lucide="github" class="w-5 h-5"></i>
+                                    </a>
+                                    <a href="#" class="text-slate-400 hover:text-white transition-colors">
+                                        <i data-lucide="external-link" class="w-5 h-5"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="text-slate-400 mb-6 line-clamp-3">
+                                A comprehensive dashboard for online retailers to track sales, manage inventory, and analyze customer data.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="text-xs font-medium px-3 py-1 rounded-full bg-slate-700 text-blue-300">React</span>
+                                <span class="text-xs font-medium px-3 py-1 rounded-full bg-slate-700 text-blue-300">Tailwind</span>
+                                <span class="text-xs font-medium px-3 py-1 rounded-full bg-slate-700 text-blue-300">Recharts</span>
+                                <span class="text-xs font-medium px-3 py-1 rounded-full bg-slate-700 text-blue-300">Node.js</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 transition-all hover:shadow-2xl hover:shadow-blue-500/10">
+                        <div class="h-48 bg-gradient-to-br from-blue-500 to-cyan-500 opacity-80 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i data-lucide="code" class="text-white/50 w-16 h-16 group-hover:scale-110 transition-transform duration-300"></i>
+                        </div>
+                        
+                        <div class="p-8">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
+                                    Task Management App
+                                </h3>
+                                <div class="flex gap-3">
+                                    <a href="#" class="text-slate-400 hover:text-white transition-colors">
+                                        <i data-lucide="github" class="w-5 h-5"></i>
+                                    </a>
+                                    <a href="#" class="text-slate-400 hover:text-white transition-colors">
+                                        <i data-lucide="external-link" class="w-5 h-5"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="text-slate-400 mb-6 line-clamp-3">
+                                A collaborative project management tool featuring real-time updates, drag-and-drop kanban boards, and team chat.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="text-xs font-medium px-3 py-1 rounded-full bg-slate-700 text-blue-300">TypeScript</span>
+                                <span class="text-xs font-medium px-3 py-1 rounded-full bg-slate-700 text-blue-300">Socket.io</span>
+                                <span class="text-xs font-medium px-3 py-1 rounded-full bg-slate-700 text-blue-300">Express</span>
+                                <span class="text-xs font-medium px-3 py-1 rounded-full bg-slate-700 text-blue-300">MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 transition-all hover:shadow-2xl hover:shadow-blue-500/10">
+                        <div class="h-48 bg-gradient-to-br from-purple-500 to-pink-500 opacity-80 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <i data-lucide="code" class="text-white/50 w-16 h-16 group-hover:scale-110 transition-transform duration-300"></i>
+                        </div>
+                        
+                        <div class="p-8">
+                            <div class="flex justify-between items-start mb-4">
+                                <h3 class="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
+                                    AI Content Generator
+                                </h3>
+                                <div class="flex gap-3">
+                                    <a href="#" class="text-slate-400 hover:text-white transition-colors">
+                                        <i data-lucide="github" class="w-5 h-5"></i>
+                                    </a>
+                                    <a href="#" class="text-slate-400 hover:text-white transition-colors">
+                                        <i data-lucide="external-link" class="w-5 h-5"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="text-slate-400 mb-6 line-clamp-3">
+                                A SaaS application that uses AI to help marketing teams generate blog posts, social media captions, and email newsletters.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="text-xs font-medium px-3 py-1 rounded-full bg-slate-700 text-blue-300">Next.js</span>
+                                <span class="text-xs font-medium px-3 py-1 rounded-full bg-slate-700 text-blue-300">OpenAI</span>
+                                <span class="text-xs font-medium px-3 py-1 rounded-full bg-slate-700 text-blue-300">Stripe</span>
+                                <span class="text-xs font-medium px-3 py-1 rounded-full bg-slate-700 text-blue-300">Postgres</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-16 text-center">
+                    <a href="#" class="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-medium transition-colors">
+                        View Full Project Archive <i data-lucide="external-link" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 bg-slate-950 relative overflow-hidden">
+            <!-- Background decoration -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Get In Touch</h2>
+                    <p class="text-slate-400">
+                        Have a project in mind or just want to say hi? My inbox is always open.
+                    </p>
+                </div>
+
+                <div class="bg-slate-900 rounded-2xl p-8 md:p-10 border border-slate-800 shadow-xl">
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label htmlFor="name" class="block text-sm font-medium text-slate-300 mb-2">Name</label>
+                                <input type="text" id="name" required class="w-full px-4 py-3 rounded-lg bg-slate-950 border border-slate-700 text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all" placeholder="John Doe" />
+                            </div>
+                            <div>
+                                <label htmlFor="email" class="block text-sm font-medium text-slate-300 mb-2">Email</label>
+                                <input type="email" id="email" required class="w-full px-4 py-3 rounded-lg bg-slate-950 border border-slate-700 text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all" placeholder="john@example.com" />
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label htmlFor="message" class="block text-sm font-medium text-slate-300 mb-2">Message</label>
+                            <textarea id="message" rows="5" required class="w-full px-4 py-3 rounded-lg bg-slate-950 border border-slate-700 text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all resize-none" placeholder="Hi, I'd like to talk about..."></textarea>
+                        </div>
+
+                        <button type="submit" id="submit-btn" class="w-full py-4 rounded-lg font-semibold flex items-center justify-center gap-2 transition-all duration-300 bg-blue-600 hover:bg-blue-700 text-white">
+                            <span id="btn-text">Send Message</span>
+                            <i data-lucide="send" class="w-5 h-5" id="btn-icon"></i>
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="mt-12 flex justify-center space-x-8">
+                    <a href="#" class="text-slate-400 hover:text-white transition-colors transform hover:scale-110 duration-200">
+                        <i data-lucide="github" class="w-6 h-6"></i>
+                    </a>
+                    <a href="#" class="text-slate-400 hover:text-white transition-colors transform hover:scale-110 duration-200">
+                        <i data-lucide="linkedin" class="w-6 h-6"></i>
+                    </a>
+                    <a href="mailto:hello@example.com" class="text-slate-400 hover:text-white transition-colors transform hover:scale-110 duration-200">
+                        <i data-lucide="mail" class="w-6 h-6"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-slate-950 border-t border-slate-900 text-center">
+        <p class="text-slate-500 text-sm" id="copyright">
+            © 2024 Ali Alfatemi. Built with Tailwind CSS.
+        </p>
+    </footer>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Update Year
+        document.getElementById('copyright').innerText = `© ${new Date().getFullYear()} Ali Alfatemi. Built with HTML & Tailwind CSS.`;
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-slate-900/95', 'backdrop-blur-md', 'shadow-lg', 'py-4');
+                navbar.classList.remove('bg-transparent', 'py-6');
+            } else {
+                navbar.classList.remove('bg-slate-900/95', 'backdrop-blur-md', 'shadow-lg', 'py-4');
+                navbar.classList.add('bg-transparent', 'py-6');
+            }
+            updateActiveSection();
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        let isMenuOpen = false;
+
+        mobileMenuBtn.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileMenu.classList.remove('hidden');
+                // Change icon to X
+                mobileMenuBtn.innerHTML = '<i data-lucide="x" class="w-6 h-6"></i>';
+            } else {
+                mobileMenu.classList.add('hidden');
+                // Change icon back to Menu
+                mobileMenuBtn.innerHTML = '<i data-lucide="menu" class="w-6 h-6"></i>';
+            }
+            lucide.createIcons();
+        });
+
+        // Close Mobile Menu on Link Click
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                isMenuOpen = false;
+                mobileMenu.classList.add('hidden');
+                mobileMenuBtn.innerHTML = '<i data-lucide="menu" class="w-6 h-6"></i>';
+                lucide.createIcons();
+            });
+        });
+
+        // Scroll Spy / Active Section Logic
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        function updateActiveSection() {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= (sectionTop - 350)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('text-blue-400');
+                link.classList.add('text-slate-300');
+                if (link.getAttribute('data-section') === current) {
+                    link.classList.add('text-blue-400');
+                    link.classList.remove('text-slate-300');
+                }
+            });
+        }
+
+        // Form Submission Simulation
+        const contactForm = document.getElementById('contact-form');
+        const submitBtn = document.getElementById('submit-btn');
+        const btnText = document.getElementById('btn-text');
+        const btnIcon = document.getElementById('btn-icon');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Loading State
+            submitBtn.disabled = true;
+            btnText.innerText = 'Sending...';
+            btnIcon.style.display = 'none';
+            
+            // Simulate API call
+            setTimeout(() => {
+                // Success State
+                submitBtn.classList.remove('bg-blue-600', 'hover:bg-blue-700');
+                submitBtn.classList.add('bg-green-600', 'hover:bg-green-700');
+                btnText.innerText = 'Message Sent!';
+                
+                contactForm.reset();
+
+                // Reset button after 3 seconds
+                setTimeout(() => {
+                    submitBtn.disabled = false;
+                    submitBtn.classList.remove('bg-green-600', 'hover:bg-green-700');
+                    submitBtn.classList.add('bg-blue-600', 'hover:bg-blue-700');
+                    btnText.innerText = 'Send Message';
+                    btnIcon.style.display = 'block';
+                    lucide.createIcons();
+                }, 3000);
+            }, 1500);
+        });
+    </script>
+</body>
+</html>
